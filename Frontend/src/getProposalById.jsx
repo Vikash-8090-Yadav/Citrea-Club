@@ -9,7 +9,7 @@ import {Web3} from 'web3';
 import ABI from "./SmartContract/artifacts/contracts/InvestmentClub.sol/InvestmentClub.json"
 
 
-const web3 = new Web3(new Web3.providers.HttpProvider("https://endpoints.omniatech.io/v1/mantle/sepolia/public"));
+const web3 = new Web3(new Web3.providers.HttpProvider("https://rpc.testnet.citrea.xyz"));
 var contractPublic = null;
 
 var pieceCID = null;

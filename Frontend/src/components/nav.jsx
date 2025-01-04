@@ -9,16 +9,16 @@ import SideMenu from './Sidemenu';
 
 
 const networks = {
-  MantleTestnet: {
-    chainId: `0x${Number(5003).toString(16)}`,
-    chainName: "MantleTestnet",
+  CitreaTestnet: {
+    chainId: `0x${Number(5115).toString(16)}`,
+    chainName: "CitreaTestnet",
     nativeCurrency: {
-      name: "MantleTestnet",
-      symbol: "MNT",
+      name: "CitreaTestnet",
+      symbol: "cBTC",
       decimals: 18,
     },
-    rpcUrls: ["https://endpoints.omniatech.io/v1/mantle/sepolia/public"],
-    blockExplorerUrls: ['https://explorer.sepolia.mantle.xyz/'],
+    rpcUrls: ["https://rpc.testnet.citrea.xyz"],
+    blockExplorerUrls: ['https://explorer.testnet.citrea.xyz/'],
 
   },
 };
@@ -47,7 +47,7 @@ function Nav() {
     
     const balanceWei= await web3.eth.getBalance(accountAddress)
             
-    const finalbalance = web3.utils.fromWei(balanceWei,"ether")+ " "+networks["MantleTestnet"]["nativeCurrency"]["name"];
+    const finalbalance = web3.utils.fromWei(balanceWei,"ether")+ " "+networks["CitreaTestnet"]["nativeCurrency"]["name"];
     console.log("result->"+finalbalance);
     setBalance(finalbalance);
     
@@ -67,7 +67,7 @@ function Nav() {
   // console.log( "The netwopr is",await web3.network)
   const chainId = await web3.eth.getChainId();
 
-  const MantleTestnetChainId = parseInt(networks.MantleTestnet.chainId, 16);
+  const CitreaTestnetChainId = parseInt(networks.CitreaTestnet.chainId, 16);
 
 
   console.log(parseInt(chainId));
@@ -77,12 +77,12 @@ function Nav() {
 
   
  
-  if(chainId1 !== MantleTestnetChainId){
+  if(chainId1 !== CitreaTestnetChainId){
 
       await window.ethereum.request({
           method:"wallet_addEthereumChain",
           params:[{
-              ...networks["MantleTestnet"]
+              ...networks["CitreaTestnet"]
           }]
       })
   }
@@ -131,7 +131,7 @@ function Nav() {
   href="/"
 >
   
-  <div className=" mmh text-lg mx-3">Small Finance</div>
+  <div className=" mmh text-lg mx-3">Citrea Club</div>
 </a>
 </div>
   <button

@@ -6,7 +6,7 @@ import $ from 'jquery';
 import ABI from "./SmartContract/artifacts/contracts/InvestmentClub.sol/InvestmentClub.json"
 
 
-const web3 = new Web3(new Web3.providers.HttpProvider("https://endpoints.omniatech.io/v1/mantle/sepolia/public"));
+const web3 = new Web3(new Web3.providers.HttpProvider("https://rpc.testnet.citrea.xyz"));
 var contractPublic = null;
 
 async function getContract(userAddress) {
@@ -50,7 +50,7 @@ window.changeProposal=(proposalId)=> {
           contractNameHeader.innerHTML = 'Description';
           theadTr.appendChild(contractNameHeader);
           var contractTickerHeader = document.createElement('th');
-          contractTickerHeader.innerHTML = 'Amount ( MNT )';
+          contractTickerHeader.innerHTML = 'Amount ( CBTC )';
           theadTr.appendChild(contractTickerHeader);
           
   

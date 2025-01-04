@@ -13,7 +13,7 @@ import {Web3} from 'web3';
 import $ from 'jquery'; 
 import ABI from "../SmartContract/artifacts/contracts/InvestmentClub.sol/InvestmentClub.json"
 const ethers = require("ethers")
-const web3 = new Web3(new Web3.providers.HttpProvider("https://endpoints.omniatech.io/v1/mantle/sepolia/public"));
+const web3 = new Web3(new Web3.providers.HttpProvider("https://rpc.testnet.citrea.xyz"));
 
 
 
@@ -194,7 +194,7 @@ function CreateClub() {
                 message: 'Transaction Successful',
                 description: (
                   <div>
-                   Transaction Hash: <a href={`https://explorer.sepolia.mantle.xyz/tx/${txReceipt.transactionHash}`} target="_blank" rel="noopener noreferrer">{txReceipt.transactionHash}</a>
+                   Transaction Hash: <a href={`https://explorer.testnet.citrea.xyz/tx/${txReceipt.transactionHash}`} target="_blank" rel="noopener noreferrer">{txReceipt.transactionHash}</a>
                   </div>
                 )
               });
@@ -263,7 +263,7 @@ function CreateClub() {
         <div className="sidebar-brand-icon rotate-n-15">
           <i className="fas fa-laugh-wink" />
         </div>
-        <div className="sidebar-brand-text mx-3">Small Finance</div>
+        <div className="sidebar-brand-text mx-3">Citrea Club</div>
       </a>
       {/* Divider */}
       <hr className="sidebar-divider my-0" />
@@ -319,7 +319,7 @@ function CreateClub() {
                   <div className="row no-gutters align-items-center">
                     <div className="col mr-2">
                       <div className="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                        Balance (ETH)
+                        Balance (CBTC)
                       </div>
                       <div className="h5 mb-0 font-weight-bold text-gray-800 view_balance_address">
                         -

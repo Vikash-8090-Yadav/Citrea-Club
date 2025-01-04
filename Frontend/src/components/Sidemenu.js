@@ -12,18 +12,18 @@ import {Web3} from 'web3';
 
 const accountAddress = localStorage.getItem("filWalletAddress");
 
-const web3 = new Web3(new Web3.providers.HttpProvider("https://endpoints.omniatech.io/v1/mantle/sepolia/public"));
+const web3 = new Web3(new Web3.providers.HttpProvider("https://rpc.testnet.citrea.xyz"));
 
 function SideMenu({ isOpen, setIsOpen, smartAccount, logout, address }) {
 
   const address1 = localStorage.getItem("filWalletAddress");
 
   function hndclck(){
-    window.open(`https://explorer.sepolia.mantle.xyz/address/${address1}`, '_blank');
+    window.open(`https://explorer.testnet.citrea.xyz/address/${address1}`, '_blank');
   }
 
   function testclk(){
-    window.open('https://www.infura.io/faucet/linea', '_blank');
+    window.open('https://citrea.xyz/faucet', '_blank');
   }
 
   const [value, setValue] = useState(0);
@@ -93,7 +93,7 @@ function SideMenu({ isOpen, setIsOpen, smartAccount, logout, address }) {
                   <div className=" mashiha divide-gray-900 bg-gray-900 text-white-900" >
                     <div className="px-4 mm  sm:px-6">
                       <div className="flex items-start justify-between">
-                        <h2 className="text-llg font-medium text-white">Small Finance</h2>
+                        <h2 className="text-llg font-medium text-white">Citrea Club</h2>
                         
                       </div>
                       
@@ -129,7 +129,7 @@ close
 
                       <div class='flex mx-4 mt-3'>
   <div className=' d1 flex items-center bg-zinc-100 text-zinc-300 w-fit p-2 px-3 rounded-l-lg'>
-    <p className='d text-sm'>{'MNT'}</p>
+    <p className='d text-sm'>{'CBTC'}</p>
     <p className= 'dd bg-zinc-800 p-1 px-3 ml-3 rounded-lg text-zinc-100'>
       {(value1)}
     </p>

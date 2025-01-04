@@ -14,7 +14,7 @@ import GetProposals from "../getProposals";
 import axios from 'axios';
 import Tg from "../components/toggle";
 const ethers = require("ethers")
-const web3 = new Web3(new Web3.providers.HttpProvider("https://endpoints.omniatech.io/v1/mantle/sepolia/public"));
+const web3 = new Web3(new Web3.providers.HttpProvider("https://rpc.testnet.citrea.xyz"));
 var contractPublic = null;
 
 var hash = null;
@@ -111,7 +111,7 @@ async function contributeClub() {
                 message: 'Transaction Successful',
                 description: (
                   <div>
-                    Transaction Hash: <a href={`https://explorer.sepolia.mantle.xyz/tx/${txReceipt.transactionHash}`} target="_blank" rel="noopener noreferrer">{txReceipt.transactionHash}</a>
+                    Transaction Hash: <a href={`https://explorer.testnet.citrea.xyz/tx/${txReceipt.transactionHash}`} target="_blank" rel="noopener noreferrer">{txReceipt.transactionHash}</a>
                   </div>
                 )
               });
@@ -200,7 +200,7 @@ async function leaveClub() {
                 message: 'Transaction Successful',
                 description: (
                   <div>
-                    Transaction Hash: <a href={`https://explorer.sepolia.mantle.xyz/tx/${txReceipt.transactionHash}`} target="_blank" rel="noopener noreferrer">{txReceipt.transactionHash}</a>
+                    Transaction Hash: <a href={`https://explorer.testnet.citrea.xyz/tx/${txReceipt.transactionHash}`} target="_blank" rel="noopener noreferrer">{txReceipt.transactionHash}</a>
                   </div>
                 )
               });
@@ -301,7 +301,7 @@ function Club() {
                 message: 'Transaction Successful',
                 description: (
                   <div>
-                    Transaction Hash: <a href={`https://explorer.sepolia.mantle.xyz/tx/${txReceipt.transactionHash}`} target="_blank" rel="noopener noreferrer">{txReceipt.transactionHash}</a>
+                    Transaction Hash: <a href={`https://explorer.testnet.citrea.xyz/tx/${txReceipt.transactionHash}`} target="_blank" rel="noopener noreferrer">{txReceipt.transactionHash}</a>
                   </div>
                 )
               });
@@ -370,7 +370,7 @@ function Club() {
           <div className="sidebar-brand-icon rotate-n-15">
             <i className="fas fa-laugh-wink" />
           </div>
-          <div className="sidebar-brand-text mx-3">Small Finance</div>
+          <div className="sidebar-brand-text mx-3">Citrea Club</div>
         </a>
         {/* Divider */}
         <hr className="sidebar-divider my-0" />
@@ -426,7 +426,7 @@ function Club() {
                     <div className="row no-gutters align-items-center">
                       <div className="col mr-2">
                         <div className="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                          Club Balance (MNT)
+                          Club Balance (CBTC)
                         </div>
                         <div className="h5 mb-0 font-weight-bold text-gray-800 club_balance">
                           -
@@ -602,7 +602,7 @@ function Club() {
                   </div>
                   <div className="card-body">
                     <p>
-                      Amount of MNT: <br />
+                      Amount of CBTC: <br />
                       <input
                         type="number"
                         id="aeAmount"

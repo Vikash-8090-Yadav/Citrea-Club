@@ -12,7 +12,7 @@ import lighthouse from '@lighthouse-web3/sdk'
 import axios from 'axios';
 import { notification } from 'antd';
 import GetClub from "../getclub";
-const web3 = new Web3(new Web3.providers.HttpProvider("https://endpoints.omniatech.io/v1/mantle/sepolia/public"));
+const web3 = new Web3(new Web3.providers.HttpProvider("https://rpc.testnet.citrea.xyz"));
 const apiKey = "207e0c12.0ca654f5c03a4be18a3185ea63c31f81"
 var contractPublic = null;
 var cid = null;
@@ -184,7 +184,7 @@ function CreateProposal() {
                     message: 'Transaction Successful',
                     description: (
                       <div>
-                        Transaction Hash: <a href={`https://explorer.sepolia.mantle.xyz/tx/${txReceipt.transactionHash}`} target="_blank" rel="noopener noreferrer">{txReceipt.transactionHash}</a>
+                        Transaction Hash: <a href={`https://explorer.testnet.citrea.xyz/tx/${txReceipt.transactionHash}`} target="_blank" rel="noopener noreferrer">{txReceipt.transactionHash}</a>
                       </div>
                     )
                   });
@@ -292,7 +292,7 @@ function CreateProposal() {
         <div className="sidebar-brand-icon rotate-n-15">
           <i className="fas fa-laugh-wink" />
         </div>
-        <div className="sidebar-brand-text mx-3">Small Finance</div>
+        <div className="sidebar-brand-text mx-3">Citrea Club</div>
       </a>
       {/* Divider */}
       <hr className="sidebar-divider my-0" />
@@ -345,7 +345,7 @@ function CreateProposal() {
                   <div className="row no-gutters align-items-center">
                     <div className="col mr-2">
                       <div className="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                        Club Balance (MNT)
+                        Club Balance (CBTC)
                       </div>
                       <div className="h5 mb-0 font-weight-bold text-gray-800 club_balance">
                         -
@@ -443,7 +443,7 @@ onChange={(e) => setDestination(e.target.value)}
                         placeholder="Enter the sepolia destination address: 0x....."
                       />{" "}
                       <br />
-                      Amount (in MNT):{" "}
+                      Amount (in CBTC):{" "}
                       <input
                         type="number"
                         id="proposal_amount"
