@@ -245,7 +245,7 @@ function Base() {
                 </div>
                 <div className="card-body">
                   <p>
-                  S.F is a light web wallet and Investment Club
+                  Citrea-Club is a light web wallet and Investment Club
                     platform to manage funds.
                   </p>
                 </div>
