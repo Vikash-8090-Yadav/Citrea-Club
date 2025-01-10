@@ -3,7 +3,7 @@
 
 ## This dapp is live : https://citrea-club.vercel.app/
 
- Video Demo: 
+ ## Video Demo:  https://youtu.be/Eq0iJYOqtCs
 
 
 #  Motivation
